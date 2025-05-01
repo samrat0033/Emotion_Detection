@@ -41,8 +41,8 @@ real-time-emotion-detection/
 ### 📁 2. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/real-time-emotion-detection.git
-cd real-time-emotion-detection
+git clone https://github.com/samrat0033/Emotion_Detection.git
+cd Emotion-Detection
 ```
 
 ---
