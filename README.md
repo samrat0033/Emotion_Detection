@@ -98,11 +98,14 @@ Give permission to open your webcam and get emotion prediction with visualizatio
 - The model (model.h5) is loaded for prediction in both the GUI and Streamlit apps.
 
 ## 🖼️ Demo
+- ### GUI APP Interface
 <img width="1486" height="985" alt="image" src="https://github.com/user-attachments/assets/1b977c9e-345d-4ba8-8bcb-eb8fbb45c8eb" />
+
+- ### WEB APP Interface
 <img width="1567" height="1361" alt="image" src="https://github.com/user-attachments/assets/b0667df8-3449-48f7-9f88-9c35154e3ef5" />
 
 
-[LIVE](https://emotion-detection-3wfz.onrender.com)
+- [LIVE LINK FOR THE APP](https://emotion-detection-3wfz.onrender.com)
 
 
 ### ⚙️ Requirements
