@@ -1,82 +1,139 @@
-Emotion Classification Project
-This project provides a robust solution for real-time emotion classification using Convolutional Neural Networks (CNNs) with TensorFlow and OpenCV. It features both a desktop GUI application that utilizes a webcam and a web-based application built with Streamlit for broader accessibility.
+# 😄 Emotion Detection System
 
-Features
-Real-time Emotion Detection: Classify emotions from live webcam feed.
+An advanced **real-time emotion detection system** using **CNN**, **TensorFlow**, **OpenCV**, and **Streamlit**. This application can identify emotions from human facial expressions using webcam input or uploaded images. Whether you're building an AI assistant or analyzing sentiment, this tool offers a versatile interface with both GUI and web access.
 
-GUI Application: A desktop interface (main.py) for direct interaction with the webcam.
+---
 
-Web Application: A user-friendly web interface (app.py) powered by Streamlit.
+## 🧠 Features
 
-CNN Model: Utilizes a pre-trained or custom-trained CNN model (model.h5) for accurate emotion prediction.
+- 📷 Real-time emotion detection via webcam
+- 🌐 Web-based image analysis using Streamlit
+- 🧪 CNN model trained on facial expression data
+- 👁️ Face detection using Haar Cascade
+- 💾 Easy-to-run with minimal setup
 
-Face Detection: Employs OpenCV's Haar Cascades for efficient face detection.
+---
 
-Folder Structure
-The project is organized as follows:
+## 📁 Project Structure
 
-.
-├── test/                       # Contains test scripts or data (if any)
-├── tfvenv/                     # Virtual environment for TensorFlow (or similar)
-├── train/                      # Scripts and data related to model training
-├── app.py                      # Streamlit web application
-├── emotion-classification...   # (Potentially a dataset or config file)
-├── haarcascade_frontalface_default.xml # OpenCV Haar Cascade for face detection
-├── main.py                     # GUI application using webcam
-├── model.h5                    # Pre-trained CNN model for emotion classification
-├── README.md                   # This README file
-└── requirements.txt            # Python dependencies
 
-Installation
-To set up the project locally, follow these steps:
+```
+Pre-trained Model: Ready-to-use emotion classification model
+📁 Project Structure
+emotion-classification/
+├── test/                          # Test datasets and files
+├── tfenv/                         # TensorFlow environment files
+├── train/                         # Training datasets and scripts
+├── app.py                         # Streamlit web application
+├── emotion-classification...      # Main emotion classification module
+├── haarcascade_frontalface...     # Haar cascade for face detection
+├── main.py                        # Desktop GUI application with webcam
+├── model.h5                       # Pre-trained CNN model
+├── README.md                      # Project documentation
+└── requirements.txt               # Python dependencies
+```
 
-Clone the repository:
 
-git clone <your-repository-url>
-cd <your-project-directory>
+---
 
-Create a virtual environment (recommended):
+## 🔧 Technologies Used
 
-python -m venv tfvenv
-source tfvenv/bin/activate  # On Windows: `tfvenv\Scripts\activate`
+- 🐍 Python 3.x
+- 🧠 TensorFlow / Keras
+- 👁️ OpenCV
+- 🌐 Streamlit
+- 📊 CNN (Convolutional Neural Network)
+- 📂 Haar Cascade Classifier
 
-Install dependencies:
+---
 
+## 🚀 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/emotion-detection-cnn.git
+   cd emotion-detection-cnn
+
+
+## Create and activate a virtual environment (recommended)
+
+bash
+```
+python -m venv myenv
+source myenv/bin/activate     # On Windows: tfenv\Scripts\activate
+```
+## Install required packages
+
+```
 pip install -r requirements.txt
+```
 
-Ensure you have tensorflow, opencv-python, streamlit, and Pillow (or Pillow-SIMD for better performance) listed in your requirements.txt.
+## 🖥️ How to Run
+### 💻 Desktop GUI App (main.py)
+This application uses your webcam and shows live emotion predictions.
+```
+python main.py 
+```
 
-Usage
-1. Running the GUI Application (Webcam)
-To launch the desktop application that uses your webcam for real-time emotion detection:
+Make sure your webcam is enabled.
 
-python main.py
+Detected emotions are displayed in real-time.
 
-This will open a new window displaying your webcam feed with detected faces and their classified emotions.
-
-2. Running the Web Application (Streamlit)
-To start the web application:
-
+## 🌍 Web App (app.py)
+A user-friendly web interface built with Streamlit for uploading and analyzing images.
+```
 streamlit run app.py
+```
+Opened in your browser.
 
-After running this command, a new tab will automatically open in your web browser, displaying the Streamlit application. You can then interact with the web interface for emotion classification.
+Give permission to open your webcam and get emotion prediction with visualization.
 
-Model
-The project uses model.h5 as the pre-trained CNN model for emotion classification. The haarcascade_frontalface_default.xml file is crucial for detecting faces in the input frames before feeding them to the CNN model.
+## 🧠 Model Details
+- Built using Convolutional Neural Networks (CNN).
 
-Technologies Used
-Python
+- Trained on datasets like FER-2013 or similar emotion datasets.
 
-TensorFlow / Keras: For building and training the CNN model.
+- Supports emotion classes like: 😄 Happy, 😢 Sad, 😠 Angry, 😲 Surprised, 😐 Neutral.
 
-OpenCV: For image processing, video capture, and face detection.
+- The model (model.h5) is loaded for prediction in both the GUI and Streamlit apps.
 
-Streamlit: For creating the interactive web application.
+## 🖼️ Demo
+<img width="1486" height="985" alt="image" src="https://github.com/user-attachments/assets/1b977c9e-345d-4ba8-8bcb-eb8fbb45c8eb" />
+<img width="1567" height="1361" alt="image" src="https://github.com/user-attachments/assets/b0667df8-3449-48f7-9f88-9c35154e3ef5" />
 
-Tkinter / PyQt / Kivy: (Implicitly, based on main.py being a GUI file) for the desktop GUI.
 
-Contributing
-Contributions are welcome! Please feel free to open issues or submit pull requests.
+[LIVE](https://emotion-detection-3wfz.onrender.com)
 
-License
-[Specify your license here, e.g., MIT License, Apache 2.0, etc.]
+
+### ⚙️ Requirements
+- Python 3.7 - 3.12
+
+- TensorFlow
+
+- OpenCV
+
+- Streamlit
+
+- Numpy, Matplotlib, etc.
+
+All dependencies are listed in requirements.txt.
+
+## 📝 Acknowledgments
+- FER-2013 Dataset — Public dataset used for facial expression recognition.
+
+- OpenCV — Computer vision library for real-time face detection.
+
+- TensorFlow — Deep learning framework.
+
+- Streamlit — Simple framework for creating web apps in Python.
+- Kaggle for the Dataset [Data Set Link](https://www.kaggle.com/jonathanoheix/face-expression-recognition-dataset)
+
+### 📄 License
+This project is licensed under the MIT License. Feel free to use, modify, and distribute.
+
+🙋‍♂️ Author
+Samrat Ghorui
+📫 sg.samratghorui@gmail.com
+🔗 [LinkedIn](https://www.linkedin.com/in/samrat-ghorui/) | [GitHub](https://github.com/samrat0033/)
+
+
