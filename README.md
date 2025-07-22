@@ -1,110 +1,90 @@
-# 😊 Real-Time Emotion Detection using CNN
+# Emotion Detection System using CNN, TensorFlow, OpenCV, and Streamlit
 
-This project detects human emotions (like Happy, Sad, Angry, etc.) in **real-time using your webcam**, powered by **Convolutional Neural Networks (CNN)** and OpenCV.
+This project is an **Emotion Detection System** that uses a **Convolutional Neural Network (CNN)** model built with **TensorFlow** to detect human emotions from webcam input in real-time. It includes two main interfaces:
 
----
+- `main.py`: A **GUI-based desktop application** using OpenCV that captures video from the webcam and displays real-time emotion classification.
+- `app.py`: A **Streamlit web application** that allows users to upload images and see the detected emotion.
 
-## 📁 Project Structure
+## Project Structure
 
-```
-real-time-emotion-detection/
-│
-├── emotion_detector.py         # Main Python script to run the model
-├── emotion_model.h5            # Trained CNN model file
-├── haarcascade_frontalface.xml # Haar Cascade for face detection
-├── README.md                   # Project documentation
-```
+📁 test/ # Directory for testing data
+📁 train/ # Directory for training data
+📁 tfenv/ # Virtual environment (not included in repo)
+📄 app.py # Streamlit web app
+📄 main.py # GUI app using OpenCV and webcam
+📄 emotion-classification... # Possibly a notebook or script for training
+📄 haarcascade_frontalface... # XML file for face detection
+📄 model.h5 # Pre-trained CNN model
+📄 requirements.txt # Python dependencies
+📄 README.md # Project documentation (this file)
 
----
+markdown
+Copy
+Edit
 
-## 🧠 Emotion Classes Detected
+## Features
 
-- Angry  
-- Disgust  
-- Fear  
-- Happy  
-- Sad  
-- Surprise  
-- Neutral  
+- Real-time emotion detection using your webcam
+- Streamlit web interface for uploading and analyzing images
+- Trained on a CNN using TensorFlow/Keras
+- Uses OpenCV's Haar cascade for face detection
 
----
+## Technologies Used
 
-## 📦 Step-by-Step Setup Instructions
+- Python  
+- TensorFlow / Keras  
+- OpenCV  
+- Streamlit  
+- Haar Cascade Classifier  
+- CNN (Convolutional Neural Network)
 
-### ✅ 1. Prerequisites
+## Installation
 
-- Python 3.7 or higher
-- Webcam (built-in or external)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/emotion-detection-cnn.git
+   cd emotion-detection-cnn
+Create and activate a virtual environment (optional but recommended):
 
----
+bash
+Copy
+Edit
+python -m venv tfenv
+source tfenv/bin/activate  # On Windows: tfenv\Scripts\activate
+Install dependencies:
 
-### 📁 2. Clone the Repository
+bash
+Copy
+Edit
+pip install -r requirements.txt
+How to Run
+1. Desktop GUI with Webcam (main.py)
+bash
+Copy
+Edit
+python main.py
+Launches a window showing real-time webcam video and predicted emotion.
 
-```bash
-git clone https://github.com/samrat0033/Emotion_Detection.git
-cd Emotion-Detection
-```
+2. Web App (app.py)
+bash
+Copy
+Edit
+streamlit run app.py
+Opens a browser-based interface where you can upload an image for emotion detection.
 
----
+Model Details
+Trained on a facial emotion dataset (e.g., FER-2013 or custom).
 
-### 🧪 3. Create a Virtual Environment (Optional but Recommended)
+CNN architecture includes multiple convolutional, pooling, and dense layers.
 
-```bash
-python -m venv venv
-source venv/bin/activate       # On Windows: venv\Scripts\activate
-```
+model.h5 contains the pre-trained model used by both the GUI and web app.
 
----
+Notes
+Make sure your webcam is enabled when running main.py.
 
-### 📚 4. Install Required Libraries
+haarcascade_frontalface_default.xml is required for detecting faces.
 
-```bash
-pip install keras tensorflow numpy opencv-python
-```
+Ensure your Python version is compatible (recommendation: Python 3.7–3.10).
 
----
-
-### 🎯 5. Run the Application
-
-Make sure the files `emotion_model.h5` and `haarcascade_frontalface.xml` are in the same directory as your Python script.
-
-```bash
-python emotion_detector.py
-```
-
-This will activate your webcam and start detecting emotions in real time.
-
----
-
-## 🧠 Libraries Used
-
-- `Keras` – For loading the pre-trained CNN model
-- `TensorFlow` – Backend for Keras
-- `OpenCV` – For webcam access and face detection
-- `NumPy` – For image array manipulation
-
----
-
-## ⚙️ How It Works
-
-1. The webcam feed is captured using `cv2.VideoCapture()`.
-2. Faces are detected in each frame using Haar Cascades.
-3. The face region is preprocessed and passed through a CNN model.
-4. The model outputs an emotion class which is displayed on the screen.
-
----
-
-## 🖼️ Sample Output
-
-Emotion label is overlaid on the detected face in real-time video feed.
-
----
-
-## 📞 Contact
-
-For questions, suggestions, or collaboration:
-
-**Samrat Ghorui**  
-Email: [sg.samratghorui@gmail.com](mailto:sg.samratghorui@gmail.com)  
-GitHub: [samrat0033](https://github.com/samrat0033)  
-LinkedIn: [samrat-ghorui-859144296](https://linkedin.com/in/samrat-ghorui-859144296)
+Screenshots
+Add screenshots of the desktop and web app interfaces here.
